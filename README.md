@@ -2,12 +2,12 @@
 
 An experiment built to play with various concepts including:
 
-- the Phoenix Framework
-- Phoenix Channels and GenEvent handlers
-- React and Flux
-- ES6
-- Immutable
-- Browserify
+- [the Phoenix Framework](http://www.phoenixframework.org/)
+- [Phoenix Channels](http://www.phoenixframework.org/v0.8.0/docs/channels) and [GenEvent handlers](http://elixir-lang.org/docs/master/elixir/GenEvent.html)
+- [React](http://facebook.github.io/react/index.html) and [Flux](http://facebook.github.io/flux/)
+- [6to5](https://6to5.org/)
+- [Immutable](http://facebook.github.io/immutable-js/)
+- [Browserify](http://browserify.org/)
 
 ## Running
 
