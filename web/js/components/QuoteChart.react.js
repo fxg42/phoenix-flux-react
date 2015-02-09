@@ -14,7 +14,7 @@ export default class QuoteChart extends React.Component {
   updateChart(props) {
     let quotes = this.props.data.quotes
       .toList()
-      .sortBy(q => q.name)
+      .sortBy(q => q.get('name'))
     let chartData = {
       labels: quotes.map(q => q.get('name')).toJS(),
       series: [ quotes.map(q => q.get('value')).toJS() ]
