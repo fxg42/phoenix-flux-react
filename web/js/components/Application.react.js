@@ -33,7 +33,7 @@ export default class Application extends React.Component {
     const count = this.state.quotes.count()
     return (
       <div>
-        <p style={{textAlign:'left'}}>{count} quote{count === 1 ? '' : 's'}</p>
+        <p style={{textAlign:'left'}}>{count === 0 ? 'no' : count} quote{count === 1 ? '' : 's'}</p>
         <QuoteChart data={this.state}/>
         <input type="button" value="Add a random quote" onClick={this.onAddClick}/>
         <hr/>
