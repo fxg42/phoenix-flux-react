@@ -1,9 +1,7 @@
 import React from 'react'
 import Chartist from 'chartist'
-import ImmutableRenderMixin from 'react-immutable-render-mixin'
 
 export default class QuoteChart extends React.Component {
-  mixins: [ ImmutableRenderMixin ]
 
   componentWillReceiveProps(props) {
     return this.updateChart(props)
