@@ -23,3 +23,5 @@ To start the client:
 3. Compile and watch the client code with `npm start`
 
 Now you can visit `localhost:4000` from your browser.
+
+... or watch it [here](https://s3.amazonaws.com/uploads.hipchat.com/183651/1323760/UNu78JMxXmPlnfi/phoenix_channels_flux_react.mov).
