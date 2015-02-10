@@ -12,8 +12,8 @@ use Mix.Config
 # disk for the key and cert.
 
 config :ex_react_ws, ExReactWs.Endpoint,
-  url: [host: "example.com"],
-  http: [port: System.get_env("PORT")],
+  url: [host: "localhost"],
+  http: [port: System.get_env("PORT") || 4000],
   secret_key_base: "rtt51H0jY3WVrIGUb0DXTSBoEfO4PXGhKIY2ERHO8ENG31HPMSYM4HQWPozkO39D"
 
 # Do not pring debug messages in production
@@ -24,7 +24,7 @@ config :logger, level: :info
 # If you are doing OTP releases, you need to instruct Phoenix
 # to start the server for all endpoints:
 #
-#     config :phoenix, :serve_endpoints, true
+config :phoenix, :serve_endpoints, true
 #
 # Alternatively, you can configure exactly which server to
 # start per endpoint:

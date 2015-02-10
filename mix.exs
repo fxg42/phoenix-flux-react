@@ -23,6 +23,7 @@ defmodule ExReactWs.Mixfile do
   # Type `mix help deps` for examples and options
   defp deps do
     [{:phoenix, "~> 0.8.0"},
-     {:cowboy, "~> 1.0"}]
+     {:cowboy, "~> 1.0"},
+     {:exrm, "~> 0.14.16"}]
   end
 end

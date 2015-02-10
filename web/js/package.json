@@ -16,7 +16,6 @@
     "react-immutable-render-mixin": "^0.8.0",
     "reactify": "^1.0.0",
     "uglify-js": "^2.4.16",
-    "underscore": "^1.7.0",
     "watchify": "^2.3.0"
   },
   "scripts": {
