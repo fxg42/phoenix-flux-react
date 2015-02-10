@@ -5,6 +5,8 @@ config :ex_react_ws, ExReactWs.Endpoint,
   debug_errors: true,
   cache_static_lookup: false
 
+config :ex_react_ws, bundle_name: "bundle.js"
+
 # Enables code reloading for development
 config :phoenix, :code_reloader, true
 

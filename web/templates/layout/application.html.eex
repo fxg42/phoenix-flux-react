@@ -27,6 +27,5 @@
 
     </div> <!-- /container -->
   </body>
-  <script type="text/javascript" src="/js/bundle.js"></script>
-  <!-- <script type="text/javascript" src="/js/bundle.min.js"></script> -->
+  <script type="text/javascript" src="/js/<%= Application.get_env(:ex_react_ws, :bundle_name, "OOPS") %>"></script>
 </html>

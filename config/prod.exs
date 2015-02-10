@@ -16,6 +16,8 @@ config :ex_react_ws, ExReactWs.Endpoint,
   http: [port: System.get_env("PORT") || 4000],
   secret_key_base: "rtt51H0jY3WVrIGUb0DXTSBoEfO4PXGhKIY2ERHO8ENG31HPMSYM4HQWPozkO39D"
 
+config :ex_react_ws, bundle_name: "bundle.min.js"
+
 # Do not pring debug messages in production
 config :logger, level: :info
 
