@@ -40,3 +40,7 @@ Then create the release and start the application:
 3. `rel/ex_react_ws/bin/ex_react_ws start`
 
 Now you can visit `localhost:4000` from your browser.
+
+## Basic concept
+
+![Basic concept](https://cloud.githubusercontent.com/assets/425363/6131715/de297278-b11b-11e4-8080-815ef5d650c2.png)
