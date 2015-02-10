@@ -25,3 +25,18 @@ To start the client:
 Now you can visit `localhost:4000` from your browser.
 
 ... or watch it [here](https://s3.amazonaws.com/uploads.hipchat.com/183651/1323760/UNu78JMxXmPlnfi/phoenix_channels_flux_react.mov).
+
+## Releasing
+
+First, build the minified version of the client:
+
+1. `cd web/js/`
+2. Build the bundle with `npm run build`
+
+Then create the release and start the application:
+
+1. `export MIX_ENV=prod`
+2. `mix release`
+3. `rel/ex_react_ws/bin/ex_react_ws start`
+
+Now you can visit `localhost:4000` from your browser.
