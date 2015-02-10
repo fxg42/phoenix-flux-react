@@ -24,12 +24,6 @@ defmodule StockQuoteSupervisor do
   end
 
   def get_random_quote_name do
-    <<a::size(32), b::size(32), c::size(32)>> = :crypto.rand_bytes(12)
-    :random.seed {a, b, c}
-    (for n <- 1..(fetch_value(2, 4)), do: fetch_value(65, 90)) |> to_string
-  end
-
-  def fetch_value(min, max) do
-    :random.uniform(max - min + 1) + min - 1
+    (for n <- 1..(Random.between(2, 4)), do: Random.between(65, 90)) |> to_string
   end
 end
