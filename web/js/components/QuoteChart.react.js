@@ -12,14 +12,14 @@ export default class QuoteChart extends React.Component {
   }
 
   updateChart(props) {
-    let quotes = this.props.data.quotes
+    const quotes = this.props.data.quotes
       .toList()
       .sortBy(q => q.get('name'))
-    let chartData = {
+    const chartData = {
       labels: quotes.map(q => q.get('name')).toJS(),
       series: [ quotes.map(q => q.get('value')).toJS() ]
     }
-    let chartOptions = {
+    const chartOptions = {
       low: 0,
       high: 1000
     }
