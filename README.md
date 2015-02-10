@@ -24,7 +24,7 @@ To start the client:
 
 Now you can visit `localhost:4000` from your browser.
 
-... or watch it [here](https://s3.amazonaws.com/uploads.hipchat.com/183651/1323760/UNu78JMxXmPlnfi/phoenix_channels_flux_react.mov).
+... or watch it [here](https://vimeo.com/119231105).
 
 ## Releasing
 
