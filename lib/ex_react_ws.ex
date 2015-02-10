@@ -1,28 +1,22 @@
 defmodule ExReactWs do
   use Application
 
-  # See http://elixir-lang.org/docs/stable/elixir/Application.html
-  # for more information on OTP Applications
+  @event_mgr_name StockQuoteEventMgr
+  @channel_name ExReactWs.StockQuoteChannel
+
   def start(_type, _args) do
     import Supervisor.Spec, warn: false
 
     children = [
       # Start the endpoint when the application starts
       worker(ExReactWs.Endpoint, []),
-      worker(GenEvent, [[name: StockQuoteEventMgr]]),
-      supervisor(StockQuoteSupervisor, []),
-
-      # Here you could define other workers and supervisors as children
-      # worker(ExReactWs.Worker, [arg1, arg2, arg3]),
+      worker(GenEvent, [[name: @event_mgr_name]]),
+      supervisor(StockQuoteSupervisor, [@event_mgr_name]),
+      worker(Register, [@event_mgr_name, @channel_name]),
     ]
 
-    # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html
-    # for other strategies and supported options
-    opts = [strategy: :one_for_all, name: ExReactWs.Supervisor]
-
-    {:ok, pid} = Supervisor.start_link(children, opts)
-    GenEvent.add_handler(StockQuoteEventMgr, ExReactWs.StockQuoteChannel, [])
-    {:ok, pid}
+    opts = [strategy: :rest_for_one, name: ExReactWs.Supervisor]
+    Supervisor.start_link(children, opts)
   end
 
   # Tell Phoenix to update the endpoint configuration
