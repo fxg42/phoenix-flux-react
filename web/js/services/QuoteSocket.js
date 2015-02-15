@@ -1,4 +1,4 @@
-import QuoteActions from '../actions/QuoteActions'
+import QuoteServerActions from '../actions/QuoteServerActions'
 
 export default {
 
@@ -9,7 +9,7 @@ export default {
       this.channel = channel
 
       channel.on("update:quote", msg => {
-        QuoteActions.updateQuote(msg.quote)
+        QuoteServerActions.updateQuote(msg.quote)
       })
     })
   },
