@@ -15,15 +15,17 @@ defmodule ExReactWs.Mixfile do
   # Type `mix help compile.app` for more information
   def application do
     [mod: {ExReactWs, []},
-     applications: [:phoenix, :cowboy, :logger]]
+     applications: [:phoenix, :cowboy, :poolboy, :logger]]
   end
 
   # Specifies your project dependencies
   #
   # Type `mix help deps` for examples and options
   defp deps do
-    [{:phoenix, "~> 0.8.0"},
+    [{:phoenix, "~> 0.9.0"},
      {:cowboy, "~> 1.0"},
-     {:exrm, "~> 0.14.16"}]
+     {:exrm, "~> 0.14.16"},
+     {:eredis, github: "wooga/eredis"},
+     {:poolboy, "~> 1.4.2"}]
   end
 end

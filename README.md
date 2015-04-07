@@ -17,8 +17,9 @@ An experiment built to play with various concepts including:
 
 To start the Phoenix application:
 
-1. Install dependencies with `mix deps.get`
-2. Start Phoenix endpoint with `mix phoenix.server`
+1. Make sure you have [Redis](http://redis.io) installed and running.
+2. Install dependencies with `mix deps.get`
+3. Start Phoenix endpoint with `mix phoenix.server`
 
 To start the client:
 

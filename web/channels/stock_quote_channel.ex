@@ -14,7 +14,7 @@ defmodule ExReactWs.StockQuoteChannel do
   end
 
   def handle_event(event, _parent) do
-    broadcast @topic, "update:quote", %{quote: event}
+    ExReactWs.Endpoint.broadcast! @topic, "update:quote", %{quote: event}
     {:ok, nil}
   end
 end

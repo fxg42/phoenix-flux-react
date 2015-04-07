@@ -2,7 +2,8 @@ defmodule ExReactWs.Endpoint do
   use Phoenix.Endpoint, otp_app: :ex_react_ws
 
   plug Plug.Static,
-    at: "/", from: :ex_react_ws
+    at: "/", from: :ex_react_ws,
+    only: ~w(css images js favicon.ico robots.txt)
 
   plug Plug.Logger
 
