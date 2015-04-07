@@ -1,5 +1,5 @@
 defmodule ExReactWs.ErrorView do
-  use ExReactWs.View
+  use ExReactWs.Web, :view
 
   def render("404.html", _assigns) do
     "Page not found - 404"

@@ -22,10 +22,10 @@ defmodule ExReactWs.Mixfile do
   #
   # Type `mix help deps` for examples and options
   defp deps do
-    [{:phoenix, "~> 0.9.0"},
+    [{:phoenix, "~> 0.10.0"},
      {:cowboy, "~> 1.0"},
      {:exrm, "~> 0.14.16"},
-     {:eredis, github: "wooga/eredis"},
+     {:redo, github: "heroku/redo"},
      {:poolboy, "~> 1.4.2"}]
   end
 end
