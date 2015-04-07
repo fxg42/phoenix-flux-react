@@ -8,6 +8,7 @@ const CHANGE_EVENT = 'change'
 class QuoteStore extends EventEmitter {
 
   constructor() {
+    super();
     this.quotes = Immutable.Map()
     this.register()
   }
