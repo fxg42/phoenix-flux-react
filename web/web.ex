@@ -22,6 +22,9 @@ defmodule ExReactWs.Web do
       # Import all HTML functions (forms, tags, etc)
       use Phoenix.HTML
 
+      # Import Phoenix Controller functions
+      import Phoenix.Controller, only: [get_flash: 2]
+
       # *****
       # Copy your old `web/view.ex` using block contents here
       # *****

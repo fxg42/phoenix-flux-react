@@ -22,7 +22,8 @@ defmodule ExReactWs.Mixfile do
   #
   # Type `mix help deps` for examples and options
   defp deps do
-    [{:phoenix, "~> 0.10.0"},
+    [{:phoenix, "~> 0.11.0"},
+     {:phoenix_live_reload, "~> 0.3"},
      {:cowboy, "~> 1.0"},
      {:exrm, "~> 0.14.16"},
      {:redo, github: "heroku/redo"},

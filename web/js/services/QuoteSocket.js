@@ -5,7 +5,10 @@ export default {
   channel: null,
 
   join() {
-    new Phoenix.Socket("/ws").join("stockquotes", {}, channel => {
+    var socket = new Phoenix.Socket("/ws")
+    socket.connect()
+
+    socket.join("stockquotes", {}).receive("ok", channel => {
       this.channel = channel
 
       channel.on("update:quote", msg => {
@@ -15,6 +18,6 @@ export default {
   },
 
   addQuote() {
-    this.channel && this.channel.send("add:quote", {})
+    this.channel && this.channel.push("add:quote", {})
   }
 }

@@ -10,7 +10,7 @@ defmodule ExReactWs.StockQuoteChannel do
 
   def handle_in("add:quote", _payload, socket) do
     StockQuoteSupervisor.start_child()
-    {:ok, socket}
+    {:noreply, socket}
   end
 
   def handle_event(event, _parent) do
