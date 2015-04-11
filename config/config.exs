@@ -7,9 +7,14 @@ use Mix.Config
 
 # Configures the endpoint
 config :ex_react_ws, ExReactWs.Endpoint,
+  root: Path.expand("..", __DIR__),
   url: [host: "localhost"],
   secret_key_base: "rtt51H0jY3WVrIGUb0DXTSBoEfO4PXGhKIY2ERHO8ENG31HPMSYM4HQWPozkO39D",
-  debug_errors: false
+  debug_errors: false,
+  pubsub: [
+    name: ExReactWs.PubSub,
+    adapter: Phoenix.PubSub.Redis
+  ]
 
 # Configures Elixir's Logger
 config :logger, :console,

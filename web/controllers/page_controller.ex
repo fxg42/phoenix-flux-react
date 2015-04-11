@@ -1,5 +1,5 @@
 defmodule ExReactWs.PageController do
-  use Phoenix.Controller
+  use ExReactWs.Web, :controller
 
   plug :action
 

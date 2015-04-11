@@ -1,3 +1,3 @@
 defmodule ExReactWs.LayoutView do
-  use ExReactWs.View
+  use ExReactWs.Web, :view
 end

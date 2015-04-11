@@ -1,3 +1,3 @@
 defmodule ExReactWs.PageView do
-  use ExReactWs.View
+  use ExReactWs.Web, :view
 end

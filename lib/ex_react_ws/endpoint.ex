@@ -2,13 +2,15 @@ defmodule ExReactWs.Endpoint do
   use Phoenix.Endpoint, otp_app: :ex_react_ws
 
   plug Plug.Static,
-    at: "/", from: :ex_react_ws
+    at: "/", from: :ex_react_ws,
+    only: ~w(css images js favicon.ico robots.txt)
 
   plug Plug.Logger
 
-  # Code reloading will only work if the :code_reloader key of
-  # the :phoenix application is set to true in your config file.
-  plug Phoenix.CodeReloader
+  if code_reloading? do
+    plug Phoenix.LiveReloader
+    plug Phoenix.CodeReloader
+  end
 
   plug Plug.Parsers,
     parsers: [:urlencoded, :multipart, :json],
